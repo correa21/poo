@@ -17,5 +17,10 @@ public class TestRGBColor
         System.out.printf("%x\n",c3.getGreen());
         System.out.printf("%x\n",c3.getBlue());
         System.out.printf("%x\n",c3.getRGB());
+        System.out.println(c2.equals(c2));
+        System.out.println(c2.toString());
+
+        RGBColor c2_copia = c2.clone();
+        System.out.println(c2_copia.toString());
      }
 }

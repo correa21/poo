@@ -2,7 +2,12 @@ package RGBcolor;
 
 public class RGBColor
 {
-    /*MASKS for RGB filtering*/
+    /*MASKS for RGB filtering
+     *
+     *This masks help future implementation
+     *of seters and getters, also to fit all
+     *RGB values in a single integer.
+     * */
     private static int RED = 0xFF0000;
     private static int GREEN = 0xFF00;
     private static int BLUE = 0xFF;
@@ -133,5 +138,22 @@ public class RGBColor
         {
             return a;
         }
+    }
+
+    public String toString()
+    {
+        return ("{red: " + this.red + ", green: " + this.green + ", blue: "
+                + this.blue + ", name: " + this.name + "}");
+    }
+
+    public boolean equals(Object o)
+    {
+        if (!(o instanceof RGBColor))
+            return false;
+        RGBColor color = (RGBColor) o;
+        return (this.getRGB() == color.getRGB());
+    }
+    public RGBColor clone(){
+        return new RGBColor(this.red, this.green, this.blue, name);
     }
 }
