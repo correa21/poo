@@ -13,7 +13,7 @@ public class Rectangle
 
     public Rectangle ()
     {
-        
+
     }
 
     public void setRectangleHeight(double height)
@@ -46,5 +46,15 @@ public class Rectangle
     {
         System.out.println(base + ", " + height + ", " +
                             getArea() + ", " + getPerimeter());
+    }
+    protected void finalize(){
+        System.out.println("Se destruye: " + this);
+        System.gc();
+    }
+    public void destructor(){
+        finalize();
+    }
+    public Rectangle clone(){
+        return new Rectangle(this.base, this.height);
     }
 }
