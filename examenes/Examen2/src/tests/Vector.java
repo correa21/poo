@@ -1,7 +1,7 @@
 package vector;
 
 
-public class Vector{
+public class Vector extends Matrix{
 
     public static int MIN_LENGTH;
     protected boolean isRowVector = true;
@@ -9,7 +9,6 @@ public class Vector{
         MIN_LENGTH = 1;
     }
     public Vector(){
-        MIN_LENGTH = 1;
         super(1,3);
     }
     public Vector(int cols){
